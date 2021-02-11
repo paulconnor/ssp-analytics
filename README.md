@@ -17,3 +17,4 @@ Test:
 
 Notes:
 - It can take several minutes for the Prometheus ServiceMonitor to be in place and active
+- The live/SSP metric scraping is a work in progress. Not all dashboards receive live data yet.
