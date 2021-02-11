@@ -15,6 +15,9 @@ Test:
   - Dashboards have a "Data Source" switch on the top left to select simulated data or live SSP usage data
   - SSP Data is scraped every 20 seconds by default so there will be a delay in it appearing in the dashboard.
 
+Uninstall:
+- helm uninstall ssp-analytics -n $ANALYTICS-NAMESPACE
+
 Notes:
 - It can take several minutes for the Prometheus ServiceMonitor to be in place and active
 - The live/SSP metric scraping is a work in progress. Not all dashboards receive live data yet.
