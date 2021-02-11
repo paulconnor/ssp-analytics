@@ -10,7 +10,7 @@ Usage:
 - helm install ssp-analytics ssp-analytics/ssp-analytics -n $ANALYTICSNAMESPACE --set sspReleaseName=$SSPRELEASENAME
 
 Test:
-- kubectl get pods,svc,servicemonitor,endpoints -n analytics $ANALYTICSNAMESPACE
+- kubectl get pods,svc,servicemonitor,endpoints -n $ANALYTICSNAMESPACE
 - Import dashboards into Grafana (13850 to 13854 inclusive)
   - Dashboards have a "Data Source" switch on the top left to select simulated data or live SSP usage data
   - SSP Data is scraped every 20 seconds by default so there will be a delay in it appearing in the dashboard.
