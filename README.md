@@ -9,3 +9,8 @@ Usage:
 
 Test:
 - kubectl get pods,svc,servicemonitor,endpoints -n analytics \<ANALYTICS-NAMESPACE\>
+- Import dashboards into Grafana (13850 to 13854 inclusive)
+  - Dashboards have a "Data Source" switch on the top left to select simulated data or live SSP usage data
+
+Notes:
+- It can take several minutes for the Prometheus ServiceMonitor to be in place and active
