@@ -1,22 +1,22 @@
 # ssp-analytics
 
 Usage:
-- export ANALYTICS-NAMESPACE=analytics
-- export SSP-RELEASENAME=\`kubectl get deployment -A | grep azserver | awk '{ print $2 }' | sed s/-azserver//\`
-- kubectl create ns $ANALYTICS-NAMESPACE
+- export ANALYTICSNAMESPACE=analytics
+- export SSPRELEASENAME=\`kubectl get deployment -A | grep azserver | awk '{ print $2 }' | sed s/-azserver//\`
+- kubectl create ns $ANALYTICSNAMESPACE
 - helm repo add ssp-analytics  "https://paulconnor.github.io/ssp-analytics/"
 - helm repo update
 - helm repo list
-- helm install ssp-analytics ssp-analytics/ssp-analytics -n $ANALYTICS-NAMESPACE --set sspReleaseName=$SSP-RELEASENAME
+- helm install ssp-analytics ssp-analytics/ssp-analytics -n $ANALYTICSNAMESPACE --set sspReleaseName=$SSPRELEASENAME
 
 Test:
-- kubectl get pods,svc,servicemonitor,endpoints -n analytics $ANALYTICS-NAMESPACE
+- kubectl get pods,svc,servicemonitor,endpoints -n analytics $ANALYTICSNAMESPACE
 - Import dashboards into Grafana (13850 to 13854 inclusive)
   - Dashboards have a "Data Source" switch on the top left to select simulated data or live SSP usage data
   - SSP Data is scraped every 20 seconds by default so there will be a delay in it appearing in the dashboard.
 
 Uninstall:
-- helm uninstall ssp-analytics -n $ANALYTICS-NAMESPACE
+- helm uninstall ssp-analytics -n $ANALYTICSNAMESPACE
 
 Notes:
 - It can take several minutes for the Prometheus ServiceMonitor to be in place and active
