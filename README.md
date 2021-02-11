@@ -2,7 +2,7 @@
 
 Usage:
 - export ANALYTICS-NAMESPACE=analytics
-- export SSP-RELEASENAME=`kubectl get deployment -A | grep azserver | awk '{ print $2 }' | sed s/-azserver//`
+- export SSP-RELEASENAME=\`kubectl get deployment -A | grep azserver | awk '{ print $2 }' | sed s/-azserver//\`
 - kubectl create ns $ANALYTICS-NAMESPACE
 - helm repo add ssp-analytics  "https://paulconnor.github.io/ssp-analytics/"
 - helm repo update
