@@ -14,6 +14,6 @@ entries:
     name: ssp-analytics
     type: application
     urls:
-    - ssp-analytics-0.1.0.tgz
-    version: 0.1.0
+    - ssp-analytics-0.1.1.tgz
+    version: 0.1.1
 generated: "2021-02-10T23:35:06.313584615Z"
