@@ -2,7 +2,7 @@
 
 Usage:
 - export ANALYTICSNAMESPACE=analytics
-- export SSPRELEASENAME=\`kubectl get deployment -A | grep azserver | awk '{ print $2 }' | sed s/-azserver//\`
+- export SSPRELEASENAME=<your SSP Release name>
 - kubectl create ns $ANALYTICSNAMESPACE
 - helm repo add ssp-analytics  "https://paulconnor.github.io/ssp-analytics/"
 - helm repo update
@@ -11,7 +11,7 @@ Usage:
 
 Test:
 - kubectl get pods,svc,servicemonitor,endpoints -n $ANALYTICSNAMESPACE
-- Import dashboards into Grafana (13850 to 13854 inclusive)
+- Import dashboards into Grafana (16044)
   - Dashboards have a "Data Source" switch on the top left to select simulated data or live SSP usage data
   - SSP Data is scraped every 20 seconds by default so there will be a delay in it appearing in the dashboard.
 
