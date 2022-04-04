@@ -2,7 +2,7 @@
 
 Usage:
 - export ANALYTICSNAMESPACE=analytics
-- export SSPRELEASENAME=<your SSP Release name>
+- export SSPRELEASENAME=\<your SSP Release name\>
 - kubectl create ns $ANALYTICSNAMESPACE
 - helm repo add ssp-analytics  "https://paulconnor.github.io/ssp-analytics/"
 - helm repo update
